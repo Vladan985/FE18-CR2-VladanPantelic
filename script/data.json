@@ -1,0 +1,55 @@
+let tasks = `[{
+    "taskName": "Shop",
+    "taskText": "Buy some meet for Wednesday",
+    "endDate": "15.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2018/03/03/10/10/meat-3195334_960_720.jpg"
+}, {
+    "taskName": "LaundryDay ahead",
+    "taskText": "Do not miss it if you want clean clothes",
+    "endDate": "18.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2016/11/29/09/17/feet-1868670_960_720.jpg"
+}, {
+    "taskName": "Appointment",
+    "taskText": "Be ready for your job interview appointment",
+    "endDate": "13.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2018/11/02/10/51/job-3790033_960_720.jpg"
+}, {
+    "taskName": "Son needs ps5 game",
+    "taskText": "He mentioned that the new sequel of Arkham franchise is out",
+    "endDate": "01.03.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2019/11/15/21/25/tank-4629329_960_720.jpg"
+}, {
+    "taskName": "Code review!!!",
+    "taskText": "Serri is on a high post (again....) and the rest of the group is sharp too, so do your thing",
+    "endDate": "11.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2017/09/08/01/23/september-2727393_960_720.jpg"
+}, {
+    "taskName": "Happy hour at Oberlaa",
+    "taskText": "Do not forget your intensive treatment",
+    "endDate": "29.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2019/12/04/00/36/spa-4671389_960_720.jpg"
+}, {
+    "taskName": "Of Dads and tools",
+    "taskText": "Bring Dad's stuff back in his garage till Sunday",
+    "endDate": "26.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2019/04/18/17/55/rocker-4137585_960_720.jpg"
+}, {
+    "taskName": "Wife needs new clothes...",
+    "taskText": "DON'T MOVE!!! Your back is killing you",
+    "endDate": "01.04.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2017/05/04/14/19/warning-2284170_960_720.jpg"
+}, {
+    "taskName": "Dinner at Joe's",
+    "taskText": "Knock your self out with a stake",
+    "endDate": "23.02.2023",
+    "priorityLevel": 0,
+    "image": "https://cdn.pixabay.com/photo/2016/01/22/02/13/meat-1155132_960_720.jpg"
+}]`
