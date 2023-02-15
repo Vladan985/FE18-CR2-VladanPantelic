@@ -1,6 +1,4 @@
-let myData = JSON.parse(tasks);
-console.log(myData);
-
+let myData = JSON.parse(tasks);                                /* getting the data from JSON file and parsing into JS */
 
 for (let values of myData)
 {
@@ -20,7 +18,7 @@ for (let values of myData)
                     <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                     </svg></p>
                     <p style="margin: 2px 5px 0px 5px;">Priority Level: </p>
-                    <p class="btn btn-success btn-sm importance">${values.priorityLevel}</p>
+                    <p class="btn btn-success btn-sm increase">${values.priorityLevel}</p>
                 </div>
                 <div class="container-fluid d-flex" id="calenderBlock">
                     <p style="margin-right: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
@@ -52,13 +50,13 @@ for (let values of myData)
     
 }
 
-let increasePriority = document.getElementsByClassName("importance");
+let increasePriority = document.getElementsByClassName("increase");
 
 for (let i = 0; i < increasePriority.length; i++) {
     increasePriority[i].addEventListener("click", function () {
         myData[i].priorityLevel++;
-        document.getElementsByClassName("importance")[i].innerHTML = myData[i].priorityLevel;
-        document.getElementById("notifications").innerHTML = myData[i].priorityLevel;
+        document.getElementsByClassName("increase")[i].innerHTML = myData[i].priorityLevel;
+        document.getElementById("notifications").innerHTML = myData[i].priorityLevel;                   /* button increases the priority level for +1 each time  */
     })
 }
 
@@ -70,17 +68,17 @@ for (let i = 0; i < decreasePriority.length; i++) {
    if(myData[i].priorityLevel < 0 ){
             myData[i].priorityLevel = 0
         }
-         document.getElementsByClassName("importance")[i].innerHTML = myData[i].priorityLevel;
+         document.getElementsByClassName("increase")[i].innerHTML = myData[i].priorityLevel;
         
     })
 }
 
-let changeColor = document.getElementsByClassName("importance");
+let changeColor = document.getElementsByClassName("increase");
 
 for (let i = 0; i < changeColor.length; i++) {
     changeColor[i].addEventListener("click", function () {
         if(myData[i].priorityLevel >=0  && myData[i].priorityLevel <=1 ){
-            changeColor[i].style.backgroundColor = "green"
+            changeColor[i].style.backgroundColor = "green"                                          /* function is changing the background color of priority as the priority increases*/
             changeColor[i].style.color = "white";
         }else if(myData[i].priorityLevel >= 2 && myData[i].priorityLevel < 4 ){
             changeColor[i].style.backgroundColor = "yellow"
@@ -92,12 +90,13 @@ for (let i = 0; i < changeColor.length; i++) {
     })
 }
 
-let setItDone = document.getElementsByClassName("doneBtn");
+let setItDoneOrUndone = document.getElementsByClassName("doneBtn");
 
-for (let i = 0; i < setItDone.length; i++) {
-    setItDone[i].addEventListener("click", function () {
-        document.getElementsByClassName("taskCards")[i].style.backgroundColor = "green"
+for (let i = 0; i < setItDoneOrUndone.length; i++) {
+    setItDoneOrUndone[i].addEventListener("click", function () {
+        document.getElementsByClassName("taskCards")[i].style.backgroundColor = "green"                     /*function marks the background with one click green as "Done" and reverts with double click white as "Undone" */
+    })
+    setItDoneOrUndone[i].addEventListener("dblclick", function () {
+        document.getElementsByClassName("taskCards")[i].style.backgroundColor = "white"
     })
 }
-
-
